@@ -40,6 +40,7 @@ const cursos = [
  });
 
 console.table(resumenCursos);
+// iiiiii
 
 const cursosDestacados=resumenCursos.filter(function(cursos){
     return cursos.promedioCalificaciones>=6;
