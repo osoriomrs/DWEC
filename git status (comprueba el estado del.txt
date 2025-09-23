@@ -1,0 +1,6 @@
+git status (comprueba el estado del repositorio)
+git add .(añadirlo)
+git commit -m "mensaje" (mensaje)
+ Si es la primera vez, enlaza tu repositorio remoto en GitHub/GitLab/Bitbucket
+git remote add origin https://github.com/usuario/repositorio.git
+git push origin main
