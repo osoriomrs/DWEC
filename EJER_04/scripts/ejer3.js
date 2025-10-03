@@ -1,2 +1,2 @@
-const cursoPremium=document.getElementsByClassName("card premium");
+const cursoPremium=document.querySelector(".card.premium");
 console.log(cursoPremium);
