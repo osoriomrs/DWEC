@@ -1,2 +1,4 @@
-const formulario=document.querySelector("#formulario-contacto");
-console.log(formulario);
+(function() {
+  const formulario = document.getElementById('formulario-contacto');
+  console.log('Ejercicio 5:', formulario);
+})();

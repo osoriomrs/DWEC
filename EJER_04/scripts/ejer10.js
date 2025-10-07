@@ -1,3 +1,6 @@
-const enlaceArreglado=document.querySelectorAll(".navegacion a");
-enlaceArreglado[1].href="https://www.google.com";
-console.log(enlaceArreglado[1]);
+(function() {
+  const primerEnlace = document.querySelector('.navegacion a');
+  if (primerEnlace) {
+    primerEnlace.href = 'https://www.google.com';
+  }
+})();

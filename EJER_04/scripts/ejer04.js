@@ -1,2 +1,4 @@
-const cursos=document.querySelectorAll(".card");
-console.log(cursos);
+(function() {
+  const tarjetas = document.querySelectorAll('.card');
+  console.log('Ejercicio 4:', tarjetas);
+})();

@@ -1,3 +1,7 @@
-const cursos=document.querySelectorAll("#lista-cursos .card");
-const enlace=document.querySelectorAll(".navegacion a")[2];
-enlace.textContent="Contacto ("+cursos.length+" cursos)";
+(function() {
+  const numCursos = document.querySelectorAll('.card').length;
+  const enlaceContacto = document.querySelector('.navegacion a:last-child');
+  if (enlaceContacto) {
+    enlaceContacto.textContent = `Contacto (${numCursos} Cursos)`;
+  }
+})();

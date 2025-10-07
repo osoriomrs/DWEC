@@ -1,3 +1,6 @@
-const tituloCambiado=document.querySelector("h1");
-tituloCambiado.textContent="Nueva Guía Interactiva del DOM";
-console.log(tituloCambiado);
+(function() {
+  const titulo = document.getElementById('titulo-principal');
+  if (titulo) {
+    titulo.textContent = 'Nueva Guía del DOM';
+  }
+})();

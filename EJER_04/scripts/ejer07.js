@@ -1,2 +1,4 @@
-const correo=document.querySelector("#email");
-console.log(correo);
+(function() {
+  const inputEmail = document.querySelector('#formulario-contacto input[type="email"]');
+  console.log('Ejercicio 7:', inputEmail);
+})();
