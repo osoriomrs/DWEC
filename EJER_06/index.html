@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJER_06</title>
+</head>
+<body>
+    <h2>Ejericio 1:</h2>
+    <button id="mostrarModal">Mostrar Modal</button>
+    <div class="oculto">
+    </div>
+
+    <h2>Ejericio 2:</h2>
+    <form id="formulario">
+  Nombre: <input type="text" id="nombre">
+  Apellido: <input type="text" id="apellido">
+  <button type="button" id="btnAgregar">Añadir Fila</button>
+</form>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+    </tr>
+  </thead>
+  <tbody id="cuerpoTabla">
+  </tbody>
+</table>
+
+<h2>Ejericio 3:</h2>
+<input type="checkbox" id="terminos">
+<button id="btnAlerta">Enviar</button>
+
+<h2>Ejericio 4:</h2>
+<div id="colores">
+    <div style="width:100px; height:100px; background-color:red; display:inline-block;"></div>
+    <div style="width:100px; height:100px; background-color:green; display:inline-block;"></div>
+    <div style="width:100px; height:100px; background-color:blue; display:inline-block;"></div>
+    <div style="width:100px; height:100px; background-color:yellow; display:inline-block;"></div>
+    <div style="width:100px; height:100px; background-color:purple; display:inline-block;"></div>
+</div>
+
+<h2>Ejericio 5:</h2>
+<input type="text" id="filtro" placeholder="Buscar país">
+<ul id="lista">
+  <li>Argentina</li>
+  <li>Brasil</li>
+  <li>Chile</li>
+  <li>Colombia</li>
+  <li>España</li>
+  <li>Francia</li>
+  <li>Italia</li>
+  <li>México</li>
+  <li>Perú</li>
+  <li>Uruguay</li>
+</ul>
+
+    <h2>Ejericio 6:</h2>
+    <div id="contenedor" style="width:300px;height:200px;border:1px solid black;position:relative;">
+  <div id="arrastrable" style="width:50px;height:50px;background:red;position:absolute;top:0;left:0;cursor:pointer;"></div>
+</div>
+
+    <h2>Ejericio 7:</h2>
+    <table border="1" id="tablaEditable">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Juan</td>
+      <td>Pérez</td>
+      <td>juan@example.com</td>
+    </tr>
+    <tr>
+      <td>Ana</td>
+      <td>Gómez</td>
+      <td>ana@example.com</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2>Ejericio 8:</h2>
+    <ul id="listaOrdenable">
+  <li>Elemento 1 <button class="subir">Subir</button> <button class="bajar">Bajar</button></li>
+  <li>Elemento 2 <button class="subir">Subir</button> <button class="bajar">Bajar</button></li>
+  <li>Elemento 3 <button class="subir">Subir</button> <button class="bajar">Bajar</button></li>
+</ul>
+
+<h2>Ejericio 9:</h2>
+<div id="cuadricula" style="display:grid;grid-template-columns:repeat(40,15px);grid-gap:1px;"></div>
+
+<h2>Ejericio 10:</h2>
+<div id="productos">
+    <div class="producto">
+        <span class="nombre">Portátil Pro</span> -
+        <span class="precio">1200</span> €
+        <button class="agregar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <span class="nombre">Ratón Inalámbrico</span> -
+        <span class="precio">25</span> €
+        <button class="agregar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <span class="nombre">Teclado Mecánico</span> -
+        <span class="precio">75</span> €
+        <button class="agregar">Añadir al carrito</button>
+    </div>
+</div>
+
+<h3>Carrito:</h3>
+<ul id="listaCarrito"></ul>
+<p>Total: <span id="total">0.00</span> €</p>
+    <!--<script src="scripts/ventana.js"></script>-->
+    <!--<script src="scripts/generador.js"></script>-->
+    <!--<script src="scripts/boton.js"></script>-->
+    <!--<script src="scripts/colores.js"></script>-->
+    <!--<script src="scripts/filtro.js"></script>-->
+   <!-- <script src="scripts/arrastrar.js"></script>-->
+   <!--<script src="scripts/editable.js"></script>-->
+   <!--<script src="scripts/ordenable.js"></script>-->
+    <!--<script src="scripts/dibujo.js"></script>-->
+    <script src="scripts/carrito.js"></script>
+
+
+</body>
+</html>
