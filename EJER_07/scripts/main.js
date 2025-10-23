@@ -61,17 +61,15 @@ const backToTopBtn = document.getElementById('back-to-top');
 
   if (!notificationBtn || !notificationArea) {
     console.warn('No se encontró el botón o el área de notificación');
-    return; // evita errores si no existen
+    return;
   }
 
-  // Listener en body
   document.body.addEventListener('notification', (event) => {
     const { mensaje, fecha } = event.detail;
     notificationArea.innerHTML = `<p>${fecha} - ${mensaje}</p>`;
     console.log('Evento personalizado recibido:', event.detail);
   });
 
-  // Disparar evento al hacer clic
   notificationBtn.addEventListener('click', () => {
     const eventoPersonalizado = new CustomEvent('notification', {
       detail: {

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJER_08</title>
+</head>
+<body>
+    <h1>Configurador de Pizza</h1>
+
+  <h3>Tamaño</h3>
+  <label><input type="radio" name="tamaño" value="10" data-label="Pequeña"> Pequeña (10€)</label><br>
+  <label><input type="radio" name="tamaño" value="12" data-label="Mediana"> Mediana (12€)</label><br>
+  <label><input type="radio" name="tamaño" value="15" data-label="Grande"> Grande (15€)</label>
+
+  <h3>Ingredientes Extra</h3>
+  <label><input type="checkbox" value="1" data-label="Extra de queso"> Extra de queso (+1€)</label><br>
+  <label><input type="checkbox" value="1.5" data-label="Pepperoni"> Pepperoni (+1.5€)</label><br>
+  <label><input type="checkbox" value="0.75" data-label="Champiñones"> Champiñones (+0.75€)</label><br>
+  <label><input type="checkbox" value="1" data-label="Piña"> Piña (+1€)</label>
+
+  <h3>Masa</h3>
+  <select id="masa">
+    <option value="0" data-label="Fina">Fina (0€)</option>
+    <option value="1" data-label="Normal">Normal (+1€)</option>
+    <option value="2.5" data-label="Rellena de queso">Rellena de queso (+2.5€)</option>
+  </select>
+
+  <h2 id="precio-total">Precio Total: 0.00 €</h2>
+
+  <button id="btn-pedido">Realizar Pedido</button>
+
+
+ <script src="scripts/pizza.js"></script>
+</body>
+</html>
