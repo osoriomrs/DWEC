@@ -1,0 +1,10 @@
+<documento>
+    <id>3</id>
+    <titulo>Tratado de Versalles</titulo>
+    <fecha>1919</fecha>
+    <imagen>img/doc3.jpg</imagen>
+    <descripcion>Acuerdo que puso fin a la Primera Guerra Mundial.</descripcion>
+    <siguiente>null</siguiente>
+    <anterior>xmls/documento_2.xml</anterior>
+</documento>
+

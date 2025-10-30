@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header h2 {
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+main {
+    margin-top: 20px;
+}
+
+#fragmento-area {
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    min-height: 100px;
+}
+
+#fragmento-area p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#alfabeto {
+    margin: 10px 0;
+}
+
+.letra {
+    display: inline-block;
+    margin: 3px;
+    padding: 5px 10px;
+    border: 1px solid #0d6efd;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.letra.seleccionada {
+    background-color: #0d6efd;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+.fallo {
+    animation: parpadeo 0.5s ease 0s 2;
+}
+
+@keyframes parpadeo {
+    0%, 100% { background-color: transparent; }
+    50% { background-color: #dc3545; color: white; }
+}
+
+strong, em {
+    cursor: pointer;
+}
+
+#contador-intentos {
+    margin: 10px 0;
+    font-weight: bold;
+}

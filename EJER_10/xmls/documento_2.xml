@@ -1,0 +1,10 @@
+<documento>
+    <id>2</id>
+    <titulo>Constitución de 1812</titulo>
+    <fecha>1812</fecha>
+    <imagen>img/doc2.jpg</imagen>
+    <descripcion>Primera constitución liberal de España, promulgada en Cádiz.</descripcion>
+    <siguiente>xmls/documento_ultimo.xml</siguiente>
+    <anterior>xmls/documento_1.xml</anterior>
+</documento>
+

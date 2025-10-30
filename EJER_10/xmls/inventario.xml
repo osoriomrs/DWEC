@@ -1,0 +1,53 @@
+<inventario>
+    <item id="AGUA01" unidad="litros">
+        <nombre>Agua Potable</nombre>
+        <cantidad>500</cantidad>
+        <consumo>4</consumo>
+    </item>
+    <item id="COM01" unidad="kg">
+        <nombre>Comida Deshidratada</nombre>
+        <cantidad>250</cantidad>
+        <consumo>2</consumo>
+    </item>
+    <item id="OXI01" unidad="botes">
+        <nombre>Oxígeno</nombre>
+        <cantidad>50</cantidad>
+        <consumo>1</consumo>
+    </item>
+    <item id="MED01" unidad="kits">
+        <nombre>Botiquín Médico</nombre>
+        <cantidad>10</cantidad>
+        <consumo>0.1</consumo>
+    </item>
+    <item id="CO2SCR01" unidad="botes">
+        <nombre>Filtro CO2</nombre>
+        <cantidad>20</cantidad>
+        <consumo>0.5</consumo>
+    </item>
+    <item id="ENERG01" unidad="kWh">
+        <nombre>Baterías de Reserva</nombre>
+        <cantidad>100</cantidad>
+        <consumo>5</consumo>
+    </item>
+    <item id="HIG01" unidad="kits">
+        <nombre>Material de Higiene</nombre>
+        <cantidad>30</cantidad>
+        <consumo>1</consumo>
+    </item>
+    <item id="COMF01" unidad="kg">
+        <nombre>Comida Fresca</nombre>
+        <cantidad>100</cantidad>
+        <consumo>1.5</consumo>
+    </item>
+    <item id="AGUA02" unidad="litros">
+        <nombre>Agua Mineral</nombre>
+        <cantidad>200</cantidad>
+        <consumo>2</consumo>
+    </item>
+    <item id="REP01" unidad="kits">
+        <nombre>Repuestos Mantenimiento</nombre>
+        <cantidad>15</cantidad>
+        <consumo>0.2</consumo>
+    </item>
+</inventario>
+

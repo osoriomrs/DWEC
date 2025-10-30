@@ -1,0 +1,7 @@
+<manuscrito>
+    <texto>El segundo secreto está en la palabra resaltada en el primer párrafo.</texto>
+    <pista>Busca el texto en <strong>strong</strong>.</pista>
+    <selector_solucion>main p strong</selector_solucion>
+    <letra_clave>A</letra_clave>
+    <siguiente_fragmento></siguiente_fragmento>
+</manuscrito>
