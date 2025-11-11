@@ -1,0 +1,121 @@
+### **Ejercicio 1: Ventana Modal Emergente**
+
+**Objetivo:** Crear y gestionar un componente de UI común como una ventana modal.
+**Tarea:**
+Crea una página con un botón “Mostrar Modal” y un `div` oculto que servirá como ventana modal.
+1. Al hacer clic en el botón “Mostrar Modal”, el `div` modal debe hacerse visible (puedes cambiar su `display` de `none` a `block`).
+2. El modal debe contener un botón “Cerrar” (o un icono ‘X’). Al hacer clic en este botón, el modal debe volver a ocultarse.
+
+### **Ejercicio 2: Generador Dinámico de Tablas**
+
+**Objetivo:** Crear elementos de tabla (`<tr>`, `<td>`) y añadirlos al DOM.
+**Tarea:**
+Crea una página con una tabla vacía (solo con el `<thead>` definido) y un formulario con dos campos: “Nombre” y “Apellido”. Al pulsar un botón “Añadir Fila”, el script debe:
+1. Crear una nueva fila (`<tr>`).
+2. Crear dos celdas (`<td>`) con los valores de los campos del formulario.
+3. Añadir las celdas a la nueva fila y la nueva fila al `<tbody>` de la tabla.
+
+### **Ejercicio 3: Habilitar/Deshabilitar un Botón**
+
+**Objetivo:** Manipular propiedades de elementos de formulario en respuesta a eventos.
+**Tarea:**
+Crea una página con un checkbox con el texto “Acepto los términos y condiciones” y un botón de “Enviar” que esté deshabilitado por defecto. El botón “Enviar” solo debe habilitarse cuando el usuario marque la casilla del checkbox. Si el usuario desmarca la casilla, el botón debe volver a deshabilitarse.
+*Pista: Usa el evento `change` en el checkbox y la propiedad `disabled` del botón.*
+
+### **Ejercicio 4: Selector de Color de Fondo**
+
+**Objetivo:** Practicar la delegación de eventos y la lectura de datos de elementos.
+**Tarea:**
+Crea un `div` que contenga 5 pequeños cuadrados (`div`), cada uno de un color de fondo diferente (rojo, azul, verde, amarillo, morado). Cuando el usuario haga clic en cualquiera de los cuadrados, el color de fondo de toda la página (`<body>`) debe cambiar al color del cuadrado seleccionado.
+*Pista: Usa un solo `event listener` en el `div` contenedor y averigua a qué cuadrado se le hizo clic usando `event.target`.*
+
+### **Ejercicio 5: Filtrado de una Lista en Vivo**
+
+**Objetivo:** Crear una funcionalidad de búsqueda o filtrado en tiempo real.
+**Tarea:**
+Crea una lista de 10 países. Añade un campo de texto (`<input>`) en la parte superior. A medida que el usuario escribe en el campo de texto, la lista de países debe filtrarse para mostrar únicamente aquellos cuyo nombre contenga el texto introducido. La búsqueda no debe ser sensible a mayúsculas y minúsculas.
+*Pista: Con el evento `input`, recorre todos los `<li>` y cambia su `display` a `none` si no coinciden con la búsqueda.*
+
+### **Ejercicio 6: Arrastrar y Soltar (Básico)**
+
+**Objetivo:** Crear una interacción de arrastrar y soltar usando eventos de ratón.
+**Tarea:**
+Crea un `div` grande (el “contenedor”) y dentro de él, un `div` más pequeño (el “arrastrable”). El usuario debe poder hacer clic y mantener presionado el `div` pequeño, moverlo libremente dentro del contenedor y soltarlo en una nueva posición.
+*Pista: Necesitarás coordinar tres eventos: `mousedown` (para saber que empieza el arrastre), `mousemove` (para actualizar la posición del elemento mientras se arrastra) y `mouseup` (para saber que el arrastre ha terminado).*
+
+---
+
+### **Ejercicio 7: Tabla Editable**
+
+**Objetivo:** Modificar el DOM en respuesta a múltiples eventos para permitir la edición de contenido “in-situ”.
+**Tarea:**
+Crea una tabla HTML con datos (ej. Nombre, Apellido, Email). Cuando el usuario haga doble clic (`dblclick`) en una celda (`<td>`), el contenido de esa celda debe ser reemplazado por un campo de texto (`<input>`) que contenga el valor actual de la celda. El usuario podrá editar el texto en el input. Cuando el campo de texto pierda el foco (`blur`), el `<input>` debe ser eliminado y el texto de la celda (`<td>`) debe actualizarse con el nuevo valor introducido.
+
+### **Ejercicio 8: Lista Ordenable**
+
+**Objetivo:** Manipular la posición de los elementos en el DOM para reordenar una lista.
+**Tarea:**
+Crea una lista de elementos (`<ul>` con `<li>`). A cada `<li>` añádele dos botones: “Subir” y “Bajar”.
+1. Al pulsar “Subir”, el elemento `<li>` debe moverse una posición hacia arriba en la lista.
+2. Al pulsar “Bajar”, debe moverse una posición hacia abajo.
+3. El botón “Subir” del primer elemento y el botón “Bajar” del último elemento deben estar deshabilitados.
+*Pista: Necesitarás usar `insertBefore()` y `nextElementSibling` / `previousElementSibling` para la lógica de reordenación.*
+
+### **Ejercicio 9: Mini Aplicación de Dibujo**
+
+**Objetivo:** Gestionar un estado (si se está dibujando o no) a través de eventos de ratón para crear una aplicación interactiva.
+**Tarea:**
+Crea una cuadrícula de 40x40 `divs` usando JavaScript. Cuando el usuario presione el botón del ratón sobre la cuadrícula y lo mueva (arrastre), los `divs` por los que pasa el cursor deben cambiar de color (ej. a negro), permitiendo “dibujar”. Cuando el usuario suelte el botón del ratón, debe dejar de dibujar.
+*Pista: Necesitarás una variable para mantener el estado (ej. `let isDrawing = false;`). El evento `mousedown` la pondrá a `true`, `mouseup` la pondrá a `false`, y el evento `mouseover` sobre los divs solo pintará si `isDrawing` es `true`.*
+
+### **Ejercicio 10: Carrito de la Compra Interactivo**
+
+**Objetivo:**
+Desarrollar una de las funcionalidades más comunes de una web de comercio. Se deberá gestionar un estado interno de la aplicación (los productos en el carrito) utilizando un array de objetos en JavaScript. Cada vez que este estado cambie, deberá actualizar (renderizar) el DOM para reflejar fielmente los productos añadidos y el coste total, combinando así la manipulación de datos con la manipulación avanzada del DOM y la gestión de eventos.
+
+**Contexto del Ejercicio:**
+Imagina que estás construyendo la página de una tienda online. En la parte principal se muestran los productos disponibles y, en un lateral, el carrito del usuario. El usuario debe poder añadir productos al carrito, y ver cómo este se actualiza instantáneamente con los nuevos productos y el precio total.
+
+---
+
+### ***1. Estructura HTML Inicial***
+
+Para empezar, puedes diseñar una página similar a la de la imagen. Contiene una sección para los productos y otra para el carrito.
+
+![tienda.jpg](attachment:087e52c8-2a7b-4961-a3a8-5aae3cd83b13:tienda.jpg)
+
+---
+
+### ***2. Requisitos de JavaScript***
+
+**Paso 1: Definir el Estado de la Aplicación**
+- Crea un array vacío en JavaScript llamado `carrito`. Este array almacenará los productos que el usuario añada.
+- Cada elemento dentro del array será un objeto que represente un producto, con el siguiente formato: `{ nombre: 'Nombre del Producto', precio: 90, cantidad: 1 }`.
+- Los datos de los productos has de sacarlos directamente de las etiquetas HTML, *No deben de estar en un array**.
+
+**Paso 2: Capturar la Acción del Usuario**
+- Seleccionar todos los botones tipo *“Añadir al carrito”*.
+- Recorre estos botones y añade un `event listener` para el evento `click` a cada uno de ellos.
+- Cuando un botón sea pulsado, la función del *listener* deberá ejecutarse.
+
+**Paso 3: Lógica para Añadir al Carrito**
+- Dentro de la función del `event listener`, obtén el nombre y el precio del producto desde las etiquetas adecuadas.
+- Comprueba si el producto ya existe en tu array `carrito` (puedes usar el método `find` o `findIndex`).
+- **Si ya existe:** Incrementa la propiedad `cantidad` de ese producto en el array.
+- **Si no existe:** Añade un nuevo objeto para ese producto al array `carrito`, con `cantidad` inicializada en `1`.
+- Después de modificar el array `carrito`, llama a una función que se encargue de actualizar el DOM (ver siguiente paso).
+
+**Paso 4: Renderizar el Carrito en el DOM**
+- Crea una función llamada `renderizarCarrito()`. Esta función será la responsable de dibujar el estado actual del array `carrito` en el HTML.
+- Lo primero que debe hacer esta función es borrar el contenido actual de la lista del carrito para evitar duplicados.
+
+- Luego, recorre el array `carrito`. Por cada objeto (producto) en el array:
+1. Crea un nuevo elemento `<li>` (por ejemplo, puedes usar otra etiqueta para ello si lo deseas) .
+2. Define su contenido de texto para mostrar el nombre, la cantidad y el precio. Por ejemplo: `Portátil Pro (x1) - 1200 €`.
+3. Añade este `<li>` a la lista `<ul>` usando `appendChild`.
+
+**Paso 5: Calcular y Mostrar el Total**
+- Crea una función `calcularTotal()` que se llame justo después de `renderizarCarrito()`.
+- Esta función debe recorrer el array `carrito` y sumar el resultado de `precio * cantidad` de cada producto.
+- *Pista avanzada: El método `reduce` de los arrays es perfecto para esta tarea.*
+- Finalmente, actualiza el contenido de la etiqueta con el total calculado, asegurándote de que tenga un formato adecuado (por ejemplo, con dos decimales).

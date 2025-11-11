@@ -1,0 +1,123 @@
+**1. Galería de Imágenes Programada**
+- **Objetivo:** Manipular una galería de imágenes mediante funciones, practicando la selección de elementos y la modificación de atributos.
+- **Estructura HTML:** Un `div` principal con una imagen grande (`id="imagen-principal"`) y debajo, un `div` con 4 imágenes en miniatura, cada una con la clase `miniatura`.
+- **Lógica (JS):**
+   **1.** Escribe una función llamada `cambiarImagenPrincipal` que acepte un número de índice como parámetro (ej: `0`, `1`, `2`, etc.).
+   **2.** Dentro de la función:
+
+      a. Selecciona **todas** las imágenes con la clase `miniatura` y guárdalas en una `NodeList`.
+
+      b. Usa el índice recibido para acceder a la miniatura correcta dentro de la `NodeList`.
+
+      c. Obtén el atributo `src` de esa miniatura.
+
+      d. Selecciona la `imagen-principal` y cambia su `src` por el de la miniatura.
+   **3.** **(Extra)**: Escribe una segunda función `resaltarMiniatura(indice)` que añada una clase `activa` (con un borde de color) a la miniatura en la posición `indice` y se la quite a todas las demás.
+
+---
+
+**2. Control Manual del Acordeón de FAQ**
+- **Objetivo:** Crear funciones para controlar la visibilidad de las respuestas en una sección de FAQ, practicando el recorrido del DOM y la manipulación de clases.
+- **Estructura HTML:** Una lista `<ul>` donde cada `<li>` contiene un `<h2>` (la pregunta) y un `<p>` (la respuesta). El párrafo `<p>` debe tener una clase `oculto` (`display: none`).
+- **Lógica (JS):**
+   **1.** Escribe una función `revelarRespuesta` que reciba como parámetro un elemento `<h2>` (la pregunta).
+   **2.** Dentro de la función, debes navegar desde ese `<h2>` hasta su elemento hermano siguiente (el `<p>`) y quitarle la clase `oculto`.
+   **3.** Escribe una segunda función `ocultarTodasLasRespuestas`. Esta función debe seleccionar **todos** los párrafos de respuesta y asegurarse de que todos tengan la clase `oculto`. Llama a esta función dentro de `revelarRespuesta` antes de mostrar la nueva respuesta, para asegurar que solo una esté visible a la vez.
+
+---
+
+**3. Informe de Validación de Formulario**
+- **Objetivo:** Crear una función que revise un formulario, recoja sus datos y genere un informe de errores en el DOM si los datos son incorrectos.
+- **Estructura HTML:** Un formulario con campos para “Nombre” y “Email”. Además, un `div` vacío con `id="informe-errores"`.
+- **Lógica (JS):**
+   **1.** Escribe una función `generarInformeDeValidacion`.
+   **2.** Dentro de la función:
+
+      a. Selecciona los `input` de nombre y email y obtén su `value`.
+
+      b. Primero, vacía por completo el `div#informe-errores` para limpiar informes anteriores.
+
+      c. Comprueba las siguientes condiciones: el nombre debe tener más de 3 caracteres y el email debe contener un `@`.
+
+      d. Por cada condición que **no** se cumpla, crea un nuevo elemento `<p>`, asígnale un texto de error (ej: “El nombre es incorrecto”) y añádelo al `div#informe-errores`.
+
+      e. Si ambas condiciones se cumplen, crea un único `<p>` con el texto “Formulario válido” y añádelo al `div`.
+
+---
+
+**4. Constructor de Tabla Dinámica**
+- **Objetivo:** Crear una tabla en el DOM a partir de un array de objetos de JavaScript.
+- **Estructura HTML:** Un `div` vacío (`id="contenedor-tabla"`).
+- **Lógica (JS):**
+   **1.** Crea un array de objetos. Ejemplo: `const usuarios = [{nombre: 'Ana', edad: 25}, {nombre: 'Luis', edad: 30}];`
+   **2.** Crea una función que reciba este array.
+   **3.** Dentro de la función, crea un elemento `<table>`. Usa `createElement` para crear las filas (`<tr>`) y celdas (`<td>`) dinámicamente, recorriendo el array.
+   **4.** Usa `DocumentFragment` para construir la tabla de forma eficiente en memoria antes de añadirla al DOM.
+   **5.** Finalmente, añade el `DocumentFragment` al `div` `contenedor-tabla`.
+
+---
+
+**5. Lista de Tareas (To-Do List) Avanzada**
+- **Objetivo:** Crear una lista de tareas donde se puedan añadir y eliminar elementos.
+- **Estructura HTML:** Un `input` de texto, un botón “Añadir” y una lista `<ul>` vacía.
+- **Lógica (JS):**
+   **1.** Al hacer clic en “Añadir”, si el `input` no está vacío, crea un nuevo `<li>` con el texto del `input`.
+   **2.** Dentro de cada `<li>` nuevo, además del texto, añade un botón “Eliminar”.
+   **3.** Usa delegación de eventos en la lista `<ul>` para escuchar los clics.
+   **4.** Si el clic es en un botón “Eliminar”, navega por el DOM (`parentNode`) para encontrar el `<li>` que lo contiene y elimínalo (`.remove()`).
+
+---
+
+**6. Pestañas de Contenido (Tabs)**
+- **Objetivo:** Crear un sistema de pestañas que muestre un contenido diferente para cada pestaña seleccionada.
+- **Estructura HTML:** Un `div` para los botones de las pestañas y otro `div` para el contenido. Dentro del de contenido, varios `div` (uno por cada pestaña) con una clase común y una clase `oculto`.
+- **Lógica (JS):**
+   **1.** Asigna un `data-id` a cada botón de pestaña que se corresponda con el `id` del `div` de contenido que debe mostrar.
+   **2.** Usando delegación de eventos, escucha los clics en los botones.
+   **3**. Al hacer clic, primero oculta todos los `div` de contenido (añadiendo la clase `oculto`).
+   **4.** Luego, obtén el `data-id` del botón clicado y muestra solo el `div` de contenido correspondiente (quitándole la clase `oculto`).
+
+---
+
+**7. Carrito de la Compra con Total Dinámico**
+- **Objetivo:** Simular un carrito de la compra que calcula el total automáticamente.
+- **Estructura HTML:** Una lista de productos, donde cada producto es un `<li>` con un nombre, un precio (guardado en un atributo llamado `data-price`) y un botón “Añadir al carrito”. Aparte, una lista `<ul>` para el carrito y un `<span>` para el total (`id="total"`).
+- **Lógica (JS):**
+   **1.** Al hacer clic en “Añadir al carrito”, clona el `<li>` del producto (`cloneNode(true)`) y añádelo a la lista del carrito.
+   **2.** Crea una función `calcularTotal()` que recorra todos los `<li>` del carrito, lea sus `data-price`, los sume y actualice el `textContent` del `span#total`.
+   **3.** Llama a `calcularTotal()` cada vez que se añada un producto.
+   **4.** **(Extra)**: Añade un botón “Quitar” a los elementos del carrito y haz que `calcularTotal()` se ejecute también al quitar un producto.
+
+---
+
+**8. Ordenar una Lista**
+- **Objetivo:** Permitir al usuario ordenar una lista de elementos alfabéticamente.
+- **Estructura HTML:** Una lista `<ul>` con varios `<li>` desordenados y un botón “Ordenar”.
+- **Lógica (JS):**
+   **1.** Al hacer clic en “Ordenar”:
+   **2.** Selecciona todos los `<li>` con `querySelectorAll`.
+   **3.** Como `querySelectorAll` devuelve una `NodeList` y no un `Array`, conviértela a un Array (ej: `Array.from(...)`).
+   **4.** Usa el método `.sort()` del array para ordenar los elementos basándote en su `textContent`.
+   **5.** Vacía la lista `<ul>` original.
+   **6.** Añade los elementos ya ordenados de vuelta a la lista.
+
+---
+
+**9. Filtro de Búsqueda Manual en una Lista**
+
+- **Objetivo:**
+Crear una función de JavaScript que permita filtrar un array de objetos que almacena una lista de ciudades y el país al que pertenecen, mostradas en la página web en una etiqueta `<ul>`. La función recibirá un texto (el país) como parámetro y deberá ocultar todos los elementos de la lista que no contengan dicho texto, mostrando únicamente los que sí lo contengan. Este ejercicio te ayudará a practicar la selección de múltiples elementos del DOM, la iteración sobre ellos y la manipulación
+de sus estilos.
+
+---
+
+**10. Generador de “Lorem Ipsum”**
+- **Objetivo:** Crear párrafos de texto de relleno dinámicamente.
+- **Estructura HTML:** Un `input` de tipo `number` para indicar cuántos párrafos generar, un botón “Generar” y un `div` (`id="resultado"`) vacío.
+- **Lógica (JS):**
+   **1.** Al hacer clic en “Generar”:
+   **2.** Obtén el número del `input`.
+   **3.** Primero, vacía el `div#resultado` por si ya tenía contenido.
+   **4.** Inicia un bucle que se repita tantas veces como el número introducido.
+   **5.** En cada iteración, crea un nuevo elemento `<p>`, asígnale un texto de “Lorem ipsum…” y añádelo al `div#resultado`.
+   **6.** Usa `DocumentFragment` para mejorar el rendimiento si se van a generar muchos párrafos.
