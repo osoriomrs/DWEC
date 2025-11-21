@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestión de Usuarios y Calificaciones</title>
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<h1>Gestión de Usuarios y Calificaciones</h1>
+
+<div class="contenedor-principal">
+  <div class="form-container">
+    <h2>Formulario de Usuario</h2>
+    <form id="formUsuario">
+      <label>Nombre: <input type="text" id="firstName"></label>
+      <label>Apellido: <input type="text" id="lastName"></label>
+      <label>Email: <input type="email" id="email"></label>
+      <label>Imagen (URL): <input type="text" id="picture"></label>
+      <button type="submit">Guardar</button>
+      <button type="button" id="btnCancelarEdicion">Cancelar</button>
+    </form>
+  </div>
+
+  <div class="tabla-container">
+    <button id="btnRefrescar">Cargar Usuarios Iniciales</button>
+    <div id="mensajes"></div>
+    <table id="tablaUsuarios">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+          <th>Imagen</th>
+          <th>Calificaciones</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
+<div id="modalCalificaciones" class="modal">
+  <div class="modal-content">
+    <span id="btnCerrarModal" class="close">&times;</span>
+    <h2>Calificaciones de <span id="modalNombre"></span></h2>
+    <form id="formCalificaciones">
+      <label>Matemáticas: <input type="number" name="Matemáticas" min="0" max="10"></label>
+      <label>Historia: <input type="number" name="Historia" min="0" max="10"></label>
+      <label>Ciencia: <input type="number" name="Ciencia" min="0" max="10"></label>
+      <label>Inglés: <input type="number" name="Inglés" min="0" max="10"></label>
+      <label>Arte: <input type="number" name="Arte" min="0" max="10"></label>
+      <button type="button" id="btnGuardarCalificaciones">Guardar Calificaciones</button>
+      <button type="button" id="btnBorrarCalificaciones">Borrar Calificaciones</button>
+    </form>
+  </div>
+</div>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>
