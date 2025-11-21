@@ -165,7 +165,6 @@ inputBusqueda.addEventListener("input", e => {
   displayUsers(e.target.value);
 });
 
-// ======================= CALIFICACIONES ======================
 window.abrirModalCalificaciones = async function(id) {
   try {
     const res = await fetch(`${API_URL}/${id}`);
