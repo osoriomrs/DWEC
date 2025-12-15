@@ -2,10 +2,7 @@ const selectUsuario = document.getElementById("selectUsuario");
 const estado = document.getElementById("estado");
 const dashboard = document.getElementById("dashboard");
 
-let usuarios = [];
-let productos = [];
-let pedidos = [];
-let detalles = [];
+let usuarios = [], productos = [], pedidos = [], detalles = [];
 
 async function cargarDatosIniciales() {
   estado.textContent = "Cargando datos maestros...";
@@ -24,13 +21,13 @@ async function cargarDatosIniciales() {
 
     estado.textContent = "";
     inicializarDashboard();
-  } catch {
+  } catch (err) {
     estado.textContent = "Error al cargar los datos.";
+    console.error(err);
   }
 }
 
 function inicializarDashboard() {
-  selectUsuario.innerHTML = "";
   usuarios.forEach(u => {
     const opt = document.createElement("option");
     opt.value = u.id;
@@ -39,7 +36,8 @@ function inicializarDashboard() {
   });
 
   selectUsuario.addEventListener("change", () => {
-    mostrarDashboardUsuario(parseInt(selectUsuario.value));
+    const usuarioId = parseInt(selectUsuario.value);
+    mostrarDashboardUsuario(usuarioId);
   });
 }
 
@@ -49,6 +47,7 @@ function mostrarDashboardUsuario(usuarioId) {
   const usuario = usuarios.find(u => u.id === usuarioId);
   if (!usuario) return;
 
+  // Panel de Usuario
   const divUsuario = document.createElement("div");
   divUsuario.innerHTML = `
     <h2>Usuario: ${usuario.nombre}</h2>
@@ -57,15 +56,14 @@ function mostrarDashboardUsuario(usuarioId) {
   `;
   dashboard.appendChild(divUsuario);
 
+  // Pedidos del usuario
   const pedidosUsuario = pedidos.filter(p => p.usuarioId === usuarioId);
   let gastoTotal = 0;
 
   const divPedidos = document.createElement("div");
-  divPedidos.innerHTML = "<h3>Pedidos</h3>";
-
+  divPedidos.innerHTML = `<h3>Pedidos:</h3>`;
   pedidosUsuario.forEach(p => {
-    const detallesPedido = detalles
-      .filter(d => d.pedidoId === p.id)
+    const detallesPedido = detalles.filter(d => d.pedidoId === p.id)
       .map(d => {
         const producto = productos.find(prod => prod.id === d.productoId);
         return {
@@ -75,20 +73,14 @@ function mostrarDashboardUsuario(usuarioId) {
         };
       });
 
-    const totalPedido = detallesPedido.reduce(
-      (sum, d) => sum + d.cantidad * d.precioUnitario,
-      0
-    );
-
+    const totalPedido = detallesPedido.reduce((sum, d) => sum + d.cantidad * d.precioUnitario, 0);
     gastoTotal += totalPedido;
 
     const divPedido = document.createElement("div");
     divPedido.innerHTML = `
       <p>Pedido ${p.id} - ${p.fecha} - Estado: ${p.estado}</p>
       <ul>
-        ${detallesPedido
-          .map(d => `<li>${d.cantidad} x ${d.nombre} - ${d.precioUnitario} €</li>`)
-          .join("")}
+        ${detallesPedido.map(d => `<li>${d.cantidad} x ${d.nombre} - ${d.precioUnitario} €</li>`).join('')}
       </ul>
       <p>Total Pedido: ${totalPedido.toFixed(2)} €</p>
       <hr>
@@ -98,6 +90,7 @@ function mostrarDashboardUsuario(usuarioId) {
 
   dashboard.appendChild(divPedidos);
 
+  // Panel de Resumen
   const divResumen = document.createElement("div");
   divResumen.innerHTML = `<h3>Gasto Total Acumulado: ${gastoTotal.toFixed(2)} €</h3>`;
   dashboard.appendChild(divResumen);

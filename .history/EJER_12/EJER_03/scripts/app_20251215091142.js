@@ -107,4 +107,3 @@ if (ultimaVisita) {
 }
 
 setCookie("ultimaVisita", new Date().toLocaleString(), 30)
-
