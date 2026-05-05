@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nombre": "Bad Bunny",
+    "pais": "Puerto Rico",
+    "genero": "Reggaetón",
+    "fecha_formacion": 2016,
+    "foto": "https://picsum.photos/id/1011/150/150"
+  },
+  {
+    "id": 2,
+    "nombre": "Anuel AA",
+    "pais": "Puerto Rico",
+    "genero": "Trap Latino",
+    "fecha_formacion": 2015,
+    "foto": "https://picsum.photos/id/1012/150/150"
+  },
+  {
+    "id": 3,
+    "nombre": "Myke Towers",
+    "pais": "Puerto Rico",
+    "genero": "Reggaetón",
+    "fecha_formacion": 2016,
+    "foto": "https://picsum.photos/id/1013/150/150"
+  },
+  {
+    "id": 4,
+    "nombre": "Rauw Alejandro",
+    "pais": "Puerto Rico",
+    "genero": "Urbano",
+    "fecha_formacion": 2017,
+    "foto": "https://picsum.photos/id/1014/150/150"
+  },
+  {
+    "id": 5,
+    "nombre": "Omar Courtz",
+    "pais": "Puerto Rico",
+    "genero": "Urbano",
+    "fecha_formacion": 2018,
+    "foto": "https://picsum.photos/id/1015/150/150"
+  }
+]

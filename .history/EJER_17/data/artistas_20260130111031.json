@@ -1,0 +1,26 @@
+export let artistas = [
+  {
+    id: 1,
+    nombre: "Bad Bunny",
+    pais: "Puerto Rico",
+    genero: "Reggaeton",
+    fecha_formacion: 2016,
+    foto: "https://i.scdn.co/image/ab6761610000e5eb9d3c88eddd53b5fdd7a2d6c1"
+  },
+  {
+    id: 2,
+    nombre: "Anuel AA",
+    pais: "Puerto Rico",
+    genero: "Trap Latino",
+    fecha_formacion: 2015,
+    foto: "https://i.scdn.co/image/ab6761610000e5ebf7b6c2e5b5b35a5a0e7b4c4d"
+  },
+  {
+    id: 3,
+    nombre: "Omar Courtz",
+    pais: "Puerto Rico",
+    genero: "Urbano",
+    fecha_formacion: 2020,
+    foto: "https://picsum.photos/150"
+  }
+];

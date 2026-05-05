@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "titulo": "Un Verano Sin Ti",
+    "anio": 2022,
+    "artistaId": 1,
+    "foto": "https://picsum.photos/id/1021/150/150"
+  },
+  {
+    "id": 2,
+    "titulo": "YHLQMDLG",
+    "anio": 2020,
+    "artistaId": 1,
+    "foto": "https://picsum.photos/id/1022/150/150"
+  },
+  {
+    "id": 3,
+    "titulo": "Emmanuel",
+    "anio": 2020,
+    "artistaId": 2,
+    "foto": "https://picsum.photos/id/1023/150/150"
+  },
+  {
+    "id": 4,
+    "titulo": "LLNM2",
+    "anio": 2022,
+    "artistaId": 2,
+    "foto": "https://picsum.photos/id/1024/150/150"
+  },
+  {
+    "id": 5,
+    "titulo": "Easy Money Baby",
+    "anio": 2020,
+    "artistaId": 3,
+    "foto": "https://picsum.photos/id/1025/150/150"
+  },
+  {
+    "id": 6,
+    "titulo": "Lyke Mike",
+    "anio": 2021,
+    "artistaId": 3,
+    "foto": "https://picsum.photos/id/1026/150/150"
+  },
+  {
+    "id": 7,
+    "titulo": "Vice Versa",
+    "anio": 2021,
+    "artistaId": 4,
+    "foto": "https://picsum.photos/id/1027/150/150"
+  },
+  {
+    "id": 8,
+    "titulo": "Playa Saturno",
+    "anio": 2023,
+    "artistaId": 4,
+    "foto": "https://picsum.photos/id/1028/150/150"
+  },
+  {
+    "id": 9,
+    "titulo": "Primera Musa",
+    "anio": 2024,
+    "artistaId": 5,
+    "foto": "https://picsum.photos/id/1029/150/150"
+  }
+]

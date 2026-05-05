@@ -1,0 +1,10 @@
+[
+  { "id": 1, "titulo": "YHLQMDLG", "anio": 2020, "artistaId": 1, "foto": "https://picsum.photos/id/100/150/150" },
+  { "id": 2, "titulo": "El Último Tour Del Mundo", "anio": 2020, "artistaId": 1, "foto": "https://picsum.photos/id/101/150/150" },
+  { "id": 3, "titulo": "Real Hasta La Muerte", "anio": 2018, "artistaId": 2, "foto": "https://picsum.photos/id/102/150/150" },
+  { "id": 4, "titulo": "Los Dioses", "anio": 2021, "artistaId": 2, "foto": "https://picsum.photos/id/103/150/150" },
+  { "id": 5, "titulo": "Motomami", "anio": 2022, "artistaId": 4, "foto": "https://picsum.photos/id/104/150/150" },
+  { "id": 6, "titulo": "El Madrileño", "anio": 2021, "artistaId": 5, "foto": "https://picsum.photos/id/105/150/150" },
+  { "id": 7, "titulo": "Afrodisíaco", "anio": 2020, "artistaId": 6, "foto": "https://picsum.photos/id/106/150/150" },
+  { "id": 8, "titulo": "Future Nostalgia", "anio": 2020, "artistaId": 7, "foto": "https://picsum.photos/id/107/150/150" }
+]

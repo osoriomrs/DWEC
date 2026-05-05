@@ -1,0 +1,16 @@
+export let albumes = [
+  {
+    id: 1,
+    titulo: "Un Verano Sin Ti",
+    anio: 2022,
+    artistaId: 1,
+    foto: "https://i.scdn.co/image/ab67616d0000b273f8b9c9b6e5a4a2a2e5c3f4d2"
+  },
+  {
+    id: 2,
+    titulo: "Emmanuel",
+    anio: 2020,
+    artistaId: 2,
+    foto: "https://picsum.photos/150"
+  }
+];
