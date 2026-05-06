@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+<body>
+
+<h1>Dashboard</h1>
+
+<div id="app"></div>
+
+<script>
+fetch("/dashboard")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("app").innerHTML = `
+      <h2>Usuario: ${data.user.username}</h2>
+
+      <h3>Proyectos</h3>
+      ${data.projects.map(p => `
+        <p>${p.title}</p>
+      `).join("")}
+
+      <h3>Redes</h3>
+      ${data.socials.map(s => `
+        <p>${s.platform}</p>
+      `).join("")}
+    `;
+  });
+</script>
+
+</body>
+</html>

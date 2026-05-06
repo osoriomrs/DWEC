@@ -1,0 +1,5 @@
+import path from "path";
+
+export const loginForm = (req, res) => {
+  res.sendFile(path.resolve("views/users/login.html"));
+};

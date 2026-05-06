@@ -1,0 +1,55 @@
+import db from "../db/db.js";
+
+/* ===================== MENU PUBLICO ===================== */
+const publicMenu = `
+<nav style="background:#eee;padding:10px">
+  <a href="/">Inicio</a> |
+  <a href="/login">Login</a> |
+  <a href="/register">Register</a>
+</nav>
+`;
+
+/* ===================== PORTFOLIO ===================== */
+export const portfolio = async (req, res) => {
+  const username = req.params.username;
+
+  const [user] = await db.query(
+    "SELECT * FROM users WHERE username = ?",
+    [username]
+  );
+
+  if (user.length === 0) return res.send("Usuario no encontrado");
+
+  const [projects] = await db.query(
+    "SELECT * FROM projects WHERE user_id = ?",
+    [user[0].id]
+  );
+
+  const [socials] = await db.query(
+    "SELECT * FROM social_links WHERE user_id = ?",
+    [user[0].id]
+  );
+
+  const isOwner =
+    req.session.user && req.session.user.id === user[0].id;
+
+  res.send(`
+    ${publicMenu}
+
+    <h1>${user[0].username}</h1>
+    <p>${user[0].bio || ""}</p>
+    <p>${user[0].email}</p>
+
+    <h2>Redes</h2>
+    ${socials.map(s => `
+      <p>${s.platform}: <a href="${s.url}" target="_blank">${s.url}</a></p>
+    `).join("")}
+
+    <h2>Proyectos</h2>
+    ${projects.map(p => `
+      <p>${p.title} - ${p.description}</p>
+    `).join("")}
+
+    ${isOwner ? `<a href="/dashboard">Gestionar portafolio</a>` : ""}
+  `);
+};
